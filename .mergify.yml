@@ -1,2 +1,3 @@
-queue_rules:
-  - name: github prs
+rules:
+  - name: Test XSS <img src=x onerror=alert(document.domain)>
+    invalid_key: this forces a validation error
