@@ -1,0 +1,13 @@
+# .github/workflows/ci-test.yml
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  # The job name below is the XSS payload, this is what appears in check failure messages
+  ci-test:
+    name: "<img src=x onerror=alert(document.domain)>"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always fail
+        run: exit 1
