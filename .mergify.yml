@@ -1,2 +1,14 @@
+# .mergify.yml
 queue_rules:
-  - name: github prs
+  - name: default
+    merge_conditions:
+      - check-success=ci-test
+
+pull_request_rules:
+  - name: queue PRs automatically
+    conditions:
+      - base=main
+      - check-success=ci-test
+    actions:
+      queue:
+        name: default
